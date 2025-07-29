@@ -7,7 +7,7 @@ function Projects({ isDarkMode }) {
 			description:
 				'La web de una base de datos vectorial creada para proyectos de IA y RAG.',
 			videoUrl: '/libvictordb-web.mp4',
-			link: 'https://libvictordb.vercel.app',
+			link: 'https://libvictor.org',
 			github: 'https://github.com/HenryJrAlvarezBte/libvictordb',
 		},
 		{

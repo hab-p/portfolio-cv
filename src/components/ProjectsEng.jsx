@@ -6,7 +6,7 @@ function ProjectsEng({ isDarkMode }) {
 			title: 'LibVictorDB Web',
 			description: 'The web of a vector database for IA and RAG projects.',
 			videoUrl: '/libvictordb-web.mp4',
-			link: 'https://libvictordb.vercel.app',
+			link: 'https://libvictor.org',
 			github: 'https://github.com/HenryJrAlvarezBte/libvictordb',
 		},
 		{
