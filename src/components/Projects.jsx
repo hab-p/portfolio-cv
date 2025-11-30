@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 function Projects({ isDarkMode }) {
 	const projects = [
@@ -161,3 +161,7 @@ function Projects({ isDarkMode }) {
 }
 
 export default Projects;
+
+Projects.propTypes = {
+    isDarkMode: PropTypes.bool.isRequired,
+};

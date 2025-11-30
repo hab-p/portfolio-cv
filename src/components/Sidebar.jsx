@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaGithub, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { SiLinkedin } from 'react-icons/si';
 
@@ -27,6 +26,6 @@ const Sidebar = () => {
 	);
 };
 
-const SidebarIcon = ({ icon }) => <div className="sidebar-icon">{icon}</div>;
+// SidebarIcon component removed as it was unused
 
 export default Sidebar;

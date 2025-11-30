@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -65,3 +65,7 @@ function Certificates({ isDarkMode }) {
 }
 
 export default Certificates;
+
+Certificates.propTypes = {
+    isDarkMode: PropTypes.bool.isRequired,
+};

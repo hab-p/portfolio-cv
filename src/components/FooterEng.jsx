@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 function FooterEng({ isDarkMode }) {
 	return (
@@ -18,3 +18,7 @@ function FooterEng({ isDarkMode }) {
 }
 
 export default FooterEng;
+
+FooterEng.propTypes = {
+    isDarkMode: PropTypes.bool.isRequired,
+};

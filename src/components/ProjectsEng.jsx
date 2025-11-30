@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 function ProjectsEng({ isDarkMode }) {
 	const projects = [
@@ -53,7 +53,7 @@ function ProjectsEng({ isDarkMode }) {
 				<p
 					className={`text-lg mb-8 ${isDarkMode ? 'text-white' : 'text-black'}`}
 				>
-					Here are some projects I've worked on recently:
+					Here are some projects I&apos;ve worked on recently:
 				</p>
 
 				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
@@ -160,3 +160,7 @@ function ProjectsEng({ isDarkMode }) {
 }
 
 export default ProjectsEng;
+
+ProjectsEng.propTypes = {
+    isDarkMode: PropTypes.bool.isRequired,
+};

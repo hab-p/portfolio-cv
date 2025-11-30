@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import { gsap } from 'gsap';
 import SplitType from 'split-type';
 
@@ -27,26 +28,31 @@ function HeroEng({ isDarkMode }) {
 			...splitLink2.words,
 		];
 
-		gsap.from(allWords, {
-			duration: 1,
-			y: 100,
-			autoAlpha: 0,
-			stagger: 0.05,
-			ease: 'power3.out',
-		});
+        gsap.from(allWords, {
+            duration: 0.5,
+            y: 60,
+            autoAlpha: 0,
+            stagger: 0.015,
+            ease: 'power3.out',
+        });
+
+		const titleEl = titleRef.current;
+		const descEl = descRef.current;
+		const link1El = link1Ref.current;
+		const link2El = link2Ref.current;
 
 		return () => {
-			if (titleRef.current) {
-				titleRef.current.innerHTML = titleRef.current.textContent;
+			if (titleEl) {
+				titleEl.innerHTML = titleEl.textContent;
 			}
-			if (descRef.current) {
-				descRef.current.innerHTML = descRef.current.textContent;
+			if (descEl) {
+				descEl.innerHTML = descEl.textContent;
 			}
-			if (link1Ref.current) {
-				link1Ref.current.innerHTML = link1Ref.current.textContent;
+			if (link1El) {
+				link1El.innerHTML = link1El.textContent;
 			}
-			if (link2Ref.current) {
-				link2Ref.current.innerHTML = link2Ref.current.textContent;
+			if (link2El) {
+				link2El.innerHTML = link2El.textContent;
 			}
 		};
 	}, []);
@@ -100,3 +106,7 @@ function HeroEng({ isDarkMode }) {
 }
 
 export default HeroEng;
+
+HeroEng.propTypes = {
+    isDarkMode: PropTypes.bool.isRequired,
+};

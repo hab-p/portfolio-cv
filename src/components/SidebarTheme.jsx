@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import { FaGithub, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { SiLinkedin } from 'react-icons/si';
 
@@ -32,3 +32,7 @@ const SidebarTheme = ({ isDarkMode }) => {
 };
 
 export default SidebarTheme;
+
+SidebarTheme.propTypes = {
+    isDarkMode: PropTypes.bool.isRequired,
+};

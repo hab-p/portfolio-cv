@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 function Skills({ isDarkMode }) {
 	const skills = [
@@ -52,3 +52,7 @@ function Skills({ isDarkMode }) {
 }
 
 export default Skills;
+
+Skills.propTypes = {
+    isDarkMode: PropTypes.bool.isRequired,
+};

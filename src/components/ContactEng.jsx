@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
+import PropTypes from 'prop-types';
 import emailjs from '@emailjs/browser';
 
 function ContactEng({ isDarkMode }) {
@@ -125,3 +126,7 @@ function ContactEng({ isDarkMode }) {
 }
 
 export default ContactEng;
+
+ContactEng.propTypes = {
+    isDarkMode: PropTypes.bool.isRequired,
+};

@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 function Footer({ isDarkMode }) {
 	return (
@@ -9,7 +9,7 @@ function Footer({ isDarkMode }) {
 		>
 			<div className="container mx-auto text-center">
 				<p>
-					&copy; {new Date().getFullYear()} Henry Alvarez Portfolio. Todos los
+					&copy; {new Date().getFullYear()} Henry Alvarez Portafolio. Todos los
 					derechos reservados.
 				</p>
 			</div>
@@ -18,3 +18,7 @@ function Footer({ isDarkMode }) {
 }
 
 export default Footer;
+
+Footer.propTypes = {
+    isDarkMode: PropTypes.bool.isRequired,
+};

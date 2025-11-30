@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 function SkillsEng({ isDarkMode }) {
 	const skills = [
@@ -28,7 +28,7 @@ function SkillsEng({ isDarkMode }) {
 				<p
 					className={`text-lg mb-8 ${isDarkMode ? 'text-white' : 'text-black'}`}
 				>
-					Here are some of the technologies I've been working with recently:
+					Here are some of the technologies I&apos;ve been working with recently:
 				</p>
 				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 					{skills.map((skill) => (
@@ -51,3 +51,7 @@ function SkillsEng({ isDarkMode }) {
 }
 
 export default SkillsEng;
+
+SkillsEng.propTypes = {
+    isDarkMode: PropTypes.bool.isRequired,
+};

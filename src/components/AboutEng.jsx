@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
@@ -22,29 +23,33 @@ function AboutEng({ isDarkMode }) {
 			...splitDesc2.words,
 		];
 
-		gsap.from(allWords, {
-			y: 80,
-			opacity: 0,
-			stagger: 0.05,
-			duration: 1,
-			ease: 'power3.out',
-			scrollTrigger: {
-				trigger: sectionRef.current,
-				start: 'top 80%',
-				toggleActions: 'play none none none',
-				once: true,
-			},
-		});
+        gsap.from(allWords, {
+            y: 80,
+            opacity: 0,
+            stagger: 0.025,
+            duration: 0.7,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: sectionRef.current,
+                start: 'top 80%',
+                toggleActions: 'play none none none',
+                once: true,
+            },
+        });
+
+		const titleEl = titleRef.current;
+		const desc1El = descRef1.current;
+		const desc2El = descRef2.current;
 
 		return () => {
-			if (titleRef.current) {
-				titleRef.current.innerHTML = titleRef.current.textContent;
+			if (titleEl) {
+				titleEl.innerHTML = titleEl.textContent;
 			}
-			if (descRef1.current) {
-				descRef1.current.innerHTML = descRef1.current.textContent;
+			if (desc1El) {
+				desc1El.innerHTML = desc1El.textContent;
 			}
-			if (descRef2.current) {
-				descRef2.current.innerHTML = descRef2.current.textContent;
+			if (desc2El) {
+				desc2El.innerHTML = desc2El.textContent;
 			}
 		};
 	}, []);
@@ -83,7 +88,7 @@ function AboutEng({ isDarkMode }) {
 							className={`text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}
 						>
 							I have worked with a variety of languages and frameworks, and I am
-							always eager to learn new things. When I'm not programming, you
+							always eager to learn new things. When I&apos;m not programming, you
 							can find me exploring new places or reading a good book.
 						</p>
 					</div>
@@ -94,3 +99,7 @@ function AboutEng({ isDarkMode }) {
 }
 
 export default AboutEng;
+
+AboutEng.propTypes = {
+    isDarkMode: PropTypes.bool.isRequired,
+};
