@@ -9,57 +9,64 @@ function HeroEng({ isDarkMode }) {
 	const link1Ref = useRef(null);
 	const link2Ref = useRef(null);
 
-	useEffect(() => {
-		const splitTitle = new SplitType(titleRef.current, {
-			types: 'words, chars',
-		});
-		const splitDesc = new SplitType(descRef.current, { types: 'words, chars' });
-		const splitLink1 = new SplitType(link1Ref.current, {
-			types: 'words, chars',
-		});
-		const splitLink2 = new SplitType(link2Ref.current, {
-			types: 'words, chars',
-		});
+useEffect(() => {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
-		const allWords = [
-			...splitTitle.words,
-			...splitDesc.words,
-			...splitLink1.words,
-			...splitLink2.words,
-		];
-
-        gsap.from(allWords, {
+    if (isMobile) {
+        gsap.from([titleRef.current, descRef.current, link1Ref.current, link2Ref.current], {
             duration: 0.5,
-            y: 60,
+            y: 40,
             autoAlpha: 0,
-            stagger: 0.015,
+            stagger: 0.1,
             ease: 'power3.out',
         });
+        return;
+    }
 
-		const titleEl = titleRef.current;
-		const descEl = descRef.current;
-		const link1El = link1Ref.current;
-		const link2El = link2Ref.current;
+    const splitTitle = new SplitType(titleRef.current, { types: 'words, chars' });
+    const splitDesc = new SplitType(descRef.current, { types: 'words, chars' });
+    const splitLink1 = new SplitType(link1Ref.current, { types: 'words, chars' });
+    const splitLink2 = new SplitType(link2Ref.current, { types: 'words, chars' });
 
-		return () => {
-			if (titleEl) {
-				titleEl.innerHTML = titleEl.textContent;
-			}
-			if (descEl) {
-				descEl.innerHTML = descEl.textContent;
-			}
-			if (link1El) {
-				link1El.innerHTML = link1El.textContent;
-			}
-			if (link2El) {
-				link2El.innerHTML = link2El.textContent;
-			}
-		};
-	}, []);
+    const allWords = [
+        ...splitTitle.words,
+        ...splitDesc.words,
+        ...splitLink1.words,
+        ...splitLink2.words,
+    ];
 
-	return (
-		<div className="bg-cover bg-center h-screen text-black flex items-center justify-center">
-			<div className="text-center px-4 max-w-4xl">
+    gsap.from(allWords, {
+        duration: 0.5,
+        y: 60,
+        autoAlpha: 0,
+        stagger: 0.015,
+        ease: 'power3.out',
+    });
+
+    const titleEl = titleRef.current;
+    const descEl = descRef.current;
+    const link1El = link1Ref.current;
+    const link2El = link2Ref.current;
+
+    return () => {
+        if (titleEl) {
+            titleEl.innerHTML = titleEl.textContent;
+        }
+        if (descEl) {
+            descEl.innerHTML = descEl.textContent;
+        }
+        if (link1El) {
+            link1El.innerHTML = link1El.textContent;
+        }
+        if (link2El) {
+            link2El.innerHTML = link2El.textContent;
+        }
+    };
+}, []);
+
+    return (
+        <div className="bg-cover bg-center h-auto md:h-screen text-black flex items-center justify-center">
+            <div className="text-center px-4 max-w-4xl">
 				<h1
 					ref={titleRef}
 					className={`text-4xl md:text-6xl font-bold mb-4 ${

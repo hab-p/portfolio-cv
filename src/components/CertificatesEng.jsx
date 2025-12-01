@@ -18,10 +18,10 @@ function CertificatesEng({ isDarkMode }) {
 	];
 
 	return (
-		<section
-			id="certificates"
-			className={`py-20 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-200'}`}
-		>
+    <section
+            id="certificates"
+            className={`py-20 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-300'}`}
+        >
 			<div className="container mx-auto px-4 text-center">
 				<h2
 					className={`text-4xl font-bold mb-4 ${

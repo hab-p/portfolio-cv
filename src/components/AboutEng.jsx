@@ -12,47 +12,66 @@ function AboutEng({ isDarkMode }) {
 	const descRef1 = useRef(null);
 	const descRef2 = useRef(null);
 
-	useEffect(() => {
-		const splitTitle = new SplitType(titleRef.current, { types: 'words' });
-		const splitDesc1 = new SplitType(descRef1.current, { types: 'words' });
-		const splitDesc2 = new SplitType(descRef2.current, { types: 'words' });
+useEffect(() => {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
-		const allWords = [
-			...splitTitle.words,
-			...splitDesc1.words,
-			...splitDesc2.words,
-		];
-
-        gsap.from(allWords, {
-            y: 80,
-            opacity: 0,
-            stagger: 0.025,
-            duration: 0.7,
+    if (isMobile) {
+        gsap.from([titleRef.current, descRef1.current, descRef2.current], {
+            y: 60,
+            autoAlpha: 0,
+            stagger: 0.1,
             ease: 'power3.out',
+            duration: 0.6,
             scrollTrigger: {
                 trigger: sectionRef.current,
-                start: 'top 80%',
+                start: 'top 85%',
                 toggleActions: 'play none none none',
                 once: true,
             },
         });
+        return;
+    }
 
-		const titleEl = titleRef.current;
-		const desc1El = descRef1.current;
-		const desc2El = descRef2.current;
+    const splitTitle = new SplitType(titleRef.current, { types: 'words' });
+    const splitDesc1 = new SplitType(descRef1.current, { types: 'words' });
+    const splitDesc2 = new SplitType(descRef2.current, { types: 'words' });
 
-		return () => {
-			if (titleEl) {
-				titleEl.innerHTML = titleEl.textContent;
-			}
-			if (desc1El) {
-				desc1El.innerHTML = desc1El.textContent;
-			}
-			if (desc2El) {
-				desc2El.innerHTML = desc2El.textContent;
-			}
-		};
-	}, []);
+    const allWords = [
+        ...splitTitle.words,
+        ...splitDesc1.words,
+        ...splitDesc2.words,
+    ];
+
+    gsap.from(allWords, {
+        y: 80,
+        opacity: 0,
+        stagger: 0.025,
+        duration: 0.7,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+            once: true,
+        },
+    });
+
+    const titleEl = titleRef.current;
+    const desc1El = descRef1.current;
+    const desc2El = descRef2.current;
+
+    return () => {
+        if (titleEl) {
+            titleEl.innerHTML = titleEl.textContent;
+        }
+        if (desc1El) {
+            desc1El.innerHTML = desc1El.textContent;
+        }
+        if (desc2El) {
+            desc2El.innerHTML = desc2El.textContent;
+        }
+    };
+}, []);
 
 	return (
 		<div

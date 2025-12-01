@@ -16,6 +16,7 @@ function NavbarEng({ isEnglish, onLanguageChange, toggleTheme, isDarkMode }) {
             className={`p-4 sticky w-full top-0 z-50 ${
                 isDarkMode ? 'bg-gray-950' : 'bg-gray-200'
             } overflow-x-hidden relative`}
+            id="navbar"
         >
             <div className="container mx-auto flex justify-between items-center">
 				<a
@@ -59,38 +60,46 @@ function NavbarEng({ isEnglish, onLanguageChange, toggleTheme, isDarkMode }) {
                     </button>
                 </div>
                 <div className="hidden md:flex items-center space-x-4">
-					<a
-						href="#about"
-						className={`${isDarkMode ? 'text-gray-300' : 'text-black'} hover:${
-							isDarkMode ? 'text-white' : 'text-gray-700'
-						}`}
-					>
-						About Me
-					</a>
-					<a
-						href="#skills"
-						className={`${isDarkMode ? 'text-gray-300' : 'text-black'} hover:${
-							isDarkMode ? 'text-white' : 'text-gray-700'
-						}`}
-					>
-						Skills
-					</a>
-					<a
-						href="#projects"
-						className={`${isDarkMode ? 'text-gray-300' : 'text-black'} hover:${
-							isDarkMode ? 'text-white' : 'text-gray-700'
-						}`}
-					>
-						Projects
-					</a>
-					<a
-						href="#contact"
-						className={`${isDarkMode ? 'text-gray-300' : 'text-black'} hover:${
-							isDarkMode ? 'text-white' : 'text-gray-700'
-						}`}
-					>
-						Contact
-					</a>
+                    <a
+                        href="#about"
+                        className={`${isDarkMode ? 'text-gray-300' : 'text-black'} hover:${
+                            isDarkMode ? 'text-white' : 'text-gray-700'
+                        }`}
+                    >
+                        About Me
+                    </a>
+                    <a
+                        href="#skills"
+                        className={`${isDarkMode ? 'text-gray-300' : 'text-black'} hover:${
+                            isDarkMode ? 'text-white' : 'text-gray-700'
+                        }`}
+                    >
+                        Skills
+                    </a>
+                    <a
+                        href="#projects"
+                        className={`${isDarkMode ? 'text-gray-300' : 'text-black'} hover:${
+                            isDarkMode ? 'text-white' : 'text-gray-700'
+                        }`}
+                    >
+                        Projects
+                    </a>
+                    <a
+                        href="#certificates"
+                        className={`${isDarkMode ? 'text-gray-300' : 'text-black'} hover:${
+                            isDarkMode ? 'text-white' : 'text-gray-700'
+                        }`}
+                    >
+                        Certificates
+                    </a>
+                    <a
+                        href="#contact"
+                        className={`${isDarkMode ? 'text-gray-300' : 'text-black'} hover:${
+                            isDarkMode ? 'text-white' : 'text-gray-700'
+                        }`}
+                    >
+                        Contact
+                    </a>
                     <div className="flex items-center ml-2">
                         <span className={`${isDarkMode ? 'text-white' : 'text-black'} mr-2 text-sm`}>
                             Idiom
@@ -118,12 +127,17 @@ function NavbarEng({ isEnglish, onLanguageChange, toggleTheme, isDarkMode }) {
                 </div>
             </div>
             {menuOpen && (
+                <>
                 <div
-                    className={`md:hidden absolute left-0 right-0 top-full z-40 border-t ${
+                    onClick={() => setMenuOpen(false)}
+                    className="fixed inset-0 bg-black/40 md:hidden z-40"
+                />
+                <div
+                    className={`fixed inset-x-0 top-16 md:hidden z-50 w-full border-t ${
                         isDarkMode
                             ? 'bg-gray-950 text-white border-gray-800'
                             : 'bg-gray-200 text-black border-gray-300'
-                    }`}
+                    } max-h-[calc(100vh-64px)] overflow-y-auto`}
                 >
                     <div className="flex flex-col p-4 space-y-2">
                         <a
@@ -160,6 +174,17 @@ function NavbarEng({ isEnglish, onLanguageChange, toggleTheme, isDarkMode }) {
                             Projects
                         </a>
                         <a
+                            href="#certificates"
+                            className={`${
+                                isDarkMode
+                                    ? 'text-gray-300 hover:text-white'
+                                    : 'text-gray-700 hover:text-black'
+                            } py-2`}
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Certificates
+                        </a>
+                        <a
                             href="#contact"
                             className={`${
                                 isDarkMode
@@ -172,6 +197,7 @@ function NavbarEng({ isEnglish, onLanguageChange, toggleTheme, isDarkMode }) {
                         </a>
                     </div>
                 </div>
+                </>
             )}
         </nav>
     );
