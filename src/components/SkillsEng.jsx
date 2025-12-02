@@ -40,7 +40,7 @@ function SkillsEng({ isDarkMode }) {
 									: 'bg-gray-300 hover:bg-gray-100 text-black'
 							}`}
 						>
-							<h3 className="text-2xl font-semibold mb-2">{skill.name}</h3>
+                            <h3 translate="no" className="text-2xl font-semibold mb-2">{skill.name}</h3>
 							<p className="text-lg">{skill.level}</p>
 						</div>
 					))}

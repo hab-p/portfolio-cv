@@ -66,50 +66,50 @@ useEffect(() => {
 
     return (
         <div className="bg-cover bg-center h-auto md:h-screen text-black flex items-center justify-center">
-            <div className="text-center px-4 max-w-4xl">
-				<h1
-					ref={titleRef}
-					className={`text-4xl md:text-6xl font-bold mb-4 ${
-						isDarkMode ? 'text-white' : 'text-black'
-					}`}
-				>
-					Welcome, I am Henry Alvarez
-				</h1>
+            <div className="text-center px-4 max-w-4xl mt-16 md:mt-0">
+                <h1
+                    ref={titleRef}
+                    className={`text-4xl md:text-6xl font-bold mb-4 ${
+                        isDarkMode ? 'text-white' : 'text-black'
+                    }`}
+                >
+                    Welcome, I am Henry Alvarez
+                </h1>
 
-				<p
-					ref={descRef}
-					className={`text-lg md:text-2xl mb-8 ${
-						isDarkMode ? 'text-white' : 'text-black'
-					}`}
-				>
-					Junior Full Stack Web Developer with 2 years of experience in projects
-					using React, TypeScript, JavaScript, Node.js, and Express. Specialized
-					in developing dynamic interfaces, reusable components, and state
-					management. Additionally, proficient in styling technologies and
-					frameworks like Bootstrap and Tailwind, transforming designs into
-					interactive experiences. Always open to learning new tools and
-					improving my skills.
-				</p>
-
-				<a
-					ref={link1Ref}
-					href="#about"
-					className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block"
-				>
-					Skills
-				</a>
-
-				<a
-					ref={link2Ref}
-					href="/henryalvarez.pdf"
-					download
-					className="bg-green-500 m-10 hover:bg-green-700 text-white font-bold py-2 px-4 rounded inline-block"
-				>
-					Download CV
-				</a>
-			</div>
-		</div>
-	);
+                <p
+                    ref={descRef}
+                    className={`text-lg md:text-2xl mb-10 ${
+                        isDarkMode ? 'text-white' : 'text-black'
+                    }`}
+                >
+                    Junior Full Stack Web Developer with 2 years of experience in projects
+                    using React, TypeScript, JavaScript, Node.js, and Express. Specialized
+                    in developing dynamic interfaces, reusable components, and state
+                    management. Additionally, proficient in styling technologies and
+                    frameworks like Bootstrap and Tailwind, transforming designs into
+                    interactive experiences. Always open to learning new tools and
+                    improving my skills.
+                </p>
+                <div className="mt-6 mb-12 flex justify-center gap-4 flex-wrap">
+                    <a
+                        ref={link1Ref}
+                        href="#about"
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    >
+                        Skills
+                    </a>
+                    <a
+                        ref={link2Ref}
+                        href="/henryalvarez.pdf"
+                        download
+                        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                    >
+                        Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default HeroEng;

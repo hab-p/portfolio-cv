@@ -27,7 +27,7 @@ function NavbarEng({ isEnglish, onLanguageChange, toggleTheme, isDarkMode }) {
 				>
 					Dev. Henry Alvarez
 				</a>
-                <div className="md:hidden flex items-center">
+                    <div className="md:hidden flex items-center">
                     <button
                         onClick={toggleMenu}
                         className={`${isDarkMode ? 'text-white' : 'text-black'}`}
@@ -35,8 +35,8 @@ function NavbarEng({ isEnglish, onLanguageChange, toggleTheme, isDarkMode }) {
                         {menuOpen ? <IoClose size={24} /> : <IoMenu size={24} />}
                     </button>
                     <div className="flex items-center ml-2">
-                        <span className={`${isDarkMode ? 'text-white' : 'text-black'} mr-2 text-sm`}>
-                            Idiom
+                        <span translate="no" className={`${isDarkMode ? 'text-white' : 'text-black'} mr-2 text-sm`}>
+                            {isEnglish ? 'Spanish' : 'English'}
                         </span>
                         <Switch
                             checked={isEnglish}
@@ -101,8 +101,8 @@ function NavbarEng({ isEnglish, onLanguageChange, toggleTheme, isDarkMode }) {
                         Contact
                     </a>
                     <div className="flex items-center ml-2">
-                        <span className={`${isDarkMode ? 'text-white' : 'text-black'} mr-2 text-sm`}>
-                            Idiom
+                        <span translate="no" className={`${isDarkMode ? 'text-white' : 'text-black'} mr-2 text-sm`}>
+                            {isEnglish ? 'Spanish' : 'English'}
                         </span>
                         <Switch
                             checked={isEnglish}

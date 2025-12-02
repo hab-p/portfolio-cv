@@ -35,8 +35,8 @@ function Navbar({ isEnglish, onLanguageChange, toggleTheme, isDarkMode }) {
                         {menuOpen ? <IoClose size={24} /> : <IoMenu size={24} />}
                     </button>
                     <div className="flex items-center ml-2">
-                        <span className={`${isDarkMode ? 'text-white' : 'text-black'} mr-2 text-sm`}>
-                            Idioma
+                        <span translate="no" className={`${isDarkMode ? 'text-white' : 'text-black'} mr-2 text-sm`}>
+                            {isEnglish ? 'Español' : 'English'}
                         </span>
                         <Switch
                             checked={isEnglish}
@@ -111,8 +111,8 @@ function Navbar({ isEnglish, onLanguageChange, toggleTheme, isDarkMode }) {
                         Contacto
                     </a>
                     <div className="flex items-center ml-2">
-                        <span className={`${isDarkMode ? 'text-white' : 'text-black'} mr-2 text-sm`}>
-                            Idioma
+                        <span translate="no" className={`${isDarkMode ? 'text-white' : 'text-black'} mr-2 text-sm`}>
+                            {isEnglish ? 'Español' : 'English'}
                         </span>
                         <Switch
                             checked={isEnglish}
