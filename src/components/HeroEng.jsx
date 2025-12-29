@@ -82,7 +82,7 @@ useEffect(() => {
                         isDarkMode ? 'text-white' : 'text-black'
                     }`}
                 >
-                    Junior Full Stack Web Developer with 2 years of experience in projects
+                    Full Stack Web Developer with 3 years of experience in projects
                     using React, TypeScript, JavaScript, Node.js, and Express. Specialized
                     in developing dynamic interfaces, reusable components, and state
                     management. Additionally, proficient in styling technologies and

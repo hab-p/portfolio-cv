@@ -82,7 +82,7 @@ useEffect(() => {
                         isDarkMode ? 'text-white' : 'text-black'
                     }`}
                 >
-                    Desarrollador Web Full Stack Junior con 2 años de experiencia en
+                    Desarrollador Web Full Stack con 3 años de experiencia en
                     proyectos con React, TypeScript, JavaScript, Node.js y Express.
                     Especializado en el desarrollo de interfaces dinámicas, componentes
                     reutilizables y gestión de estado. Además, manejo tecnologías y
