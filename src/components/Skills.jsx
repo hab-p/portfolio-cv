@@ -4,10 +4,13 @@ function Skills({ isDarkMode }) {
 	const skills = [
 		{ name: 'JavaScript' },
 		{ name: 'React' },
+		{ name: 'Next.js' },
 		{ name: 'HTML' },
 		{ name: 'CSS' },
 		{ name: 'Node.js' },
+		{ name: 'Nest.js' },
 		{ name: 'TypeScript' },
+		{ name: 'Docker' },
 	];
 
 	return (

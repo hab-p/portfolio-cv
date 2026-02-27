@@ -83,12 +83,12 @@ useEffect(() => {
                     }`}
                 >
                     Full Stack Web Developer with 3 years of experience in projects
-                    using React, TypeScript, JavaScript, Node.js, and Express. Specialized
-                    in developing dynamic interfaces, reusable components, and state
-                    management. Additionally, proficient in styling technologies and
-                    frameworks like Bootstrap and Tailwind, transforming designs into
-                    interactive experiences. Always open to learning new tools and
-                    improving my skills.
+                    with React, Next.js, TypeScript, JavaScript, Node.js, Nest.js,
+                    Express, and Docker. Specialized in developing dynamic interfaces,
+                    reusable components, and state management. Additionally, I handle
+                    technologies and frameworks for styling such as Bootstrap and
+                    Tailwind, transforming designs into interactive experiences. Always
+                    open to learning new tools and improving my skills.
                 </p>
                 <div className="mt-6 mb-12 flex justify-center gap-4 flex-wrap">
                     <a

@@ -83,12 +83,13 @@ useEffect(() => {
                     }`}
                 >
                     Desarrollador Web Full Stack con 3 años de experiencia en
-                    proyectos con React, TypeScript, JavaScript, Node.js y Express.
-                    Especializado en el desarrollo de interfaces dinámicas, componentes
-                    reutilizables y gestión de estado. Además, manejo tecnologías y
-                    frameworks para estilización como Bootstrap y Tailwind, transformando
-                    diseños en experiencias interactivas. Siempre abierto a aprender
-                    nuevas herramientas y mejorar mis habilidades.
+                    proyectos con React, Next.js, TypeScript, JavaScript, Node.js,
+                    Nest.js, Express y Docker. Especializado en el desarrollo de
+                    interfaces dinámicas, componentes reutilizables y gestión de
+                    estado. Además, manejo tecnologías y frameworks para estilización
+                    como Bootstrap y Tailwind, transformando diseños en experiencias
+                    interactivas. Siempre abierto a aprender nuevas herramientas y
+                    mejorar mis habilidades.
                 </p>
                 <div className="mt-6 mb-12 flex justify-center gap-4 flex-wrap">
                     <a
