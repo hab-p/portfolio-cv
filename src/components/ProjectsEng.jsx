@@ -8,7 +8,7 @@ function ProjectsEng({ isDarkMode }) {
 		{
 			title: 'Ciber Club Web',
 			description:
-				'The Ciber Club website (https://www.ciber-club.org) where live tournaments and events are organized at fairs in Buenos Aires City.',
+				'The Ciber Club website where live tournaments and events are organized at fairs in Buenos Aires City.',
 			videoUrl: '/ciber-club-web.mp4',
 			link: 'https://www.ciber-club.org',
 			github: 'https://github.com/hab-p/ciber-club-frontend',
